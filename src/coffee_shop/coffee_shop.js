@@ -78,17 +78,28 @@ newSlider.querySelector('.slider-right').onclick = function() {
 
 */
 
-var width2 = 1200;
+var width2 = 1675;
 var count2 = 1;
+var countSlide = 3; // количество слайдов
 var newSlider = document.getElementById('slider');
 var spisok = newSlider.querySelector ('ul');
 var spisokchld = newSlider.querySelectorAll('li');
 var sliderBtn = document.getElementById('slider-right');
 var position2 = 0;
+var marginSlide = -(width2 * countSlide);
 
 function sliderRight() {
   position2 = Math.max(position2 - width2 * count2, -width2 *(spisokchld.length - count2));
   spisok.style.marginLeft = position2 + 'px';
+
+  
+  if (position2 = marginSlide ) {
+    spisok.style.marginLeft = 0 +'px';
+  }
+  
+  
+  
+  console.log(marginSlide)
   console.log(position2)
 }
 
