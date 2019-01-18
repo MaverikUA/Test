@@ -1,0 +1,61 @@
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete {
+    float: right;
+    color: yellow;
+    display: none;
+    cursor: pointer;
+}
+
+
+
+.task:hover .delete {
+    display: inline-block;
+   
+}
+
+
+body {
+    background-image: url(https://gallery.yopriceville.com/var/albums/Backgrounds/Spooky_Highway_Background.jpg?m=1445719147);
+    background-size: cover;
+    
+}
+
+.input-task {
+    border-radius:5px;
+    border: 1px solid rgb(204, 204, 204);
+}
+
+.tasks {
+    max-width: 300px;
+    color: white;
+}
+
+.task {
+    text-align: left;  
+    color: white;
+    font-size: 20px;
+}
+/*
+form.style.width = "100%";
+    author.style.width = "100%";
+    author.style.borderRadius = "5px";
+    author.style.border = "1px solid rgb(204, 204, 204)";
+    input.style.width = "100%";
+    input.style.marginTop = "10px";
+    input.style.marginBottom = "9px";
+    input.style.borderRadius = "4px";
+    input.style.border = "1px solid rgb(204, 204, 204)";
+    input.style.height = "100px";
+    btnSubmit.style.width = "100%";
+    btnSubmit.style.height = "35px";
+    btnSubmit.style.backgroundColor = "blue";
+    btnSubmit.style.color = "white";
+    btnSubmit.style.border = "none";
+    btnSubmit.style.marginBottom = "15px";
+    btnSubmit.style.fontWeight = "600";
+*/

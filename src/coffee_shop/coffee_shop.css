@@ -1,0 +1,13 @@
+.main {
+    max-width: 1980px;
+    margin: 0 auto;
+}
+
+.main__screen {
+    display: flex;
+}
+
+.left_side {
+    height: 200px;
+    background-color: red;
+}
