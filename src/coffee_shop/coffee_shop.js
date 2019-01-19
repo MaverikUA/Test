@@ -31,13 +31,7 @@ function smallSliderRight() {
 
 nextBtn.addEventListener('click', smallSliderRight )
 
-carusel.querySelector('.prev').onclick = function() {
-  // сдвиг влево
-  // последнее передвижение влево может быть не на 3, а на 2 или 1 элемент
-  position = Math.min(position + width * count, 0)
-  listing.style.marginLeft = position + 'px';
-  
-};
+
 
 carusel.querySelector('.next').onclick = function() {
   // сдвиг вправо
@@ -55,92 +49,38 @@ for (var i = 0; i < tovary.length; i++) {
   span2.innerHTML = i + 1;
   tovary[i].appendChild(span2);
 }
-/*
-var width2 = 1200;
-var count2 = 1;
 
-var newSlider = document.getElementById('slider');
-var spisok = newSlider.querySelector ('ul');
-var spisokchld = newSlider.querySelectorAll('li');
-
-var position2 = 0;
-
-newSlider.querySelector('.sliderleft').onclick = function() {
-  position2 = Math.min(position2 + width2 * count2, 0)
-  spisok.style.marginLeft = position2 + 'px';
-}
-
-newSlider.querySelector('.slider-right').onclick = function() {
-  position2 = Math.max(position2 - width2 * count2, -width2 *(spisokchld.length - count2));
-  spisok.style.marginLeft = position2 + 'px';
-}
-
-
-*/
 
 var width2 = 1675;
 var count2 = 1;
-var countSlide = 3; // количество слайдов
+var countSlide = 4; // количество слайдов
 var newSlider = document.getElementById('slider');
 var spisok = newSlider.querySelector ('ul');
 var spisokchld = newSlider.querySelectorAll('li');
 var sliderBtn = document.getElementById('slider-right');
 var position2 = 0;
-var marginSlide = -(width2 * countSlide);
+var marginSlide = -(width2 * countSlide) ;
 
 function sliderRight() {
-  position2 = Math.max(position2 - width2 * count2, -width2 *(spisokchld.length - count2));
-  spisok.style.marginLeft = position2 + 'px';
+  position2 = Math.max(position2 - width2 * count2);
+  
 
   
-  if (position2 = marginSlide ) {
-    spisok.style.marginLeft = 0 +'px';
+  
+
+  if (position2 == marginSlide ) {
+    position2 = 0;
+    
   }
-  
-  
+  spisok.style.marginLeft = position2 + 'px';
   
   console.log(marginSlide)
   console.log(position2)
+  
 }
 
 sliderBtn.addEventListener('click', sliderRight )
 
-
-/*
-
-document.getElementById('slider-right').onclick = sliderRight;
-var left = 0;
-
-function sliderRight() {
-  let polosa = document.getElementById('polosa');
-  let prevButton = document.getElementById('sliderleft');
-  left = left - 1200;
-  if (left < -2400) {
-    left = 0;
-  } else if (left >= -1200) {
-    prevButton.style.display = 'block';
-  }
-  console.log(left);
-  polosa.style.left = left+'px';
-}
-
-
-document.getElementById('sliderleft').onclick = sliderLeft;
-var left = 0;
-
-function sliderLeft() {
-  let polosa = document.getElementById('polosa');
-  
-  left = left + 1200;
-  if (left > 0) {
-    left = 0;
-    
-  } 
-  polosa.style.left = left+'px';
-}
-console.log(left);
-
-*/
 
 window.onload = function() {
   document.querySelector('.tabs-header').addEventListener('click', fTabs);
