@@ -52,25 +52,17 @@ for (var i = 0; i < tovary.length; i++) {
 
 
 var width2 = 1675;
-var count2 = 1;
 var countSlide = 4; // количество слайдов
 var newSlider = document.getElementById('slider');
 var spisok = newSlider.querySelector ('ul');
-var spisokchld = newSlider.querySelectorAll('li');
 var sliderBtn = document.getElementById('slider-right');
 var position2 = 0;
 var marginSlide = -(width2 * countSlide) ;
 
 function sliderRight() {
-  position2 = Math.max(position2 - width2 * count2);
-  
-
-  
-  
-
+  position2 = Math.max(position2 - width2);
   if (position2 == marginSlide ) {
     position2 = 0;
-    
   }
   spisok.style.marginLeft = position2 + 'px';
   
